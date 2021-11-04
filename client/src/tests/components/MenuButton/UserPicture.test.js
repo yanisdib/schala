@@ -3,15 +3,15 @@ import UserPicture from '../../../components/MenuButton/UserPicture';
 
 describe('UserPicture component', () => {
     let wrapper;
-    beforeEach(() => {
-        wrapper = mount(<UserPicture picture='blank_profile.jpg' />); 
-        console.log(wrapper.props());
-    });
+    let defaultProps = UserPicture.defaultProps.picture;
+
+    beforeEach(() => wrapper = mount(<UserPicture />));
 
     it('renders properly', () => {
         expect(wrapper).toMatchSnapshot();
     });
+
     it('renders with default picture props', () => {
-        expect(wrapper.props().picture).toEqual('blank_profile.jpg');
+        expect(defaultProps).toEqual('blank_profile.jpg');
     });
 });

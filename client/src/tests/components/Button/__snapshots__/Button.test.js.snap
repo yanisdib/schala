@@ -3,7 +3,6 @@
 exports[`Button Component renders properly 1`] = `
 <button
   className="sc-bdfBQB jJtPLv"
-  type="primary"
 >
   Button
 </button>
