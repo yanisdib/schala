@@ -1,20 +1,37 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
+import { MenuButton } from '../';
+import HeaderAuthButton from './HeaderAuthButton/HeaderAuthButton';
+
+import './styles.scss';
+
 function Header({ isLogged }) {
-    return (
-        <header>
-            
-        </header>
-    );
+    if (!isLogged) {
+        return (
+            <header className="container">
+                <div className="header-wrapper">
+                    <div className="logo"></div>
+                    <div className="signup-button">
+                        <HeaderAuthButton>Signup</HeaderAuthButton>
+                    </div>
+                    <div className="signin-button">
+                        <HeaderAuthButton variant="login">Login</HeaderAuthButton>
+                    </div>
+                    <div className="header-menu-button">
+                        <MenuButton />
+                    </div>
+                </div>
+            </header>
+        );
+    }
 }
 
 Header.defaultProps = {
-    isLogged: false
+    isLogged: false,
 };
 
 Header.propTypes = {
-    isLogged: PropTypes.bool.isRequired
+    isLogged: PropTypes.bool.isRequired,
 };
 
 export default Header;

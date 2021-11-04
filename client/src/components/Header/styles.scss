@@ -1,0 +1,29 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+header {
+    margin: 30px 0px;
+    .header-wrapper {
+        @include make-row();
+        column-gap: 22px;
+        width: 100%;
+        align-items: center;
+        .logo {
+            @include make-col(2);
+        }
+        .signup-button {
+            @include make-col(1);
+            align-items: center;
+            max-width: fit-content;
+        }
+        .signin-button {
+            @include make-col(1);
+            align-items: center;
+            max-width: fit-content;
+        }
+        .header-menu-button {
+            @include make-col(2);
+            align-items: end;
+        }
+    }
+}
