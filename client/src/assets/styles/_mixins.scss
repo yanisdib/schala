@@ -1,0 +1,36 @@
+// Allows responsive styles depending on user's device
+
+@mixin media-breakpoint($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    }
+}
+
+// Creates a container according to user's device
+
+@mixin make-container($breakpoint) {
+    @if map-has-key($container-max-widths, $breakpoint) {
+        max-width: #{map-get($container-max-widths, $breakpoint)};
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+// Creates a flex wrapper for a series of columns
+
+@mixin make-row() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+// Creates a sizeable column inside a flex wrapper
+
+@mixin make-col($col-size) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: $col-size;
+}

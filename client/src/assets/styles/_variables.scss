@@ -1,0 +1,27 @@
+// Declares global margins and paddings
+
+$gutter-x: 30px;
+$gutter-y: 30px;
+
+// Declares breakpoints according to screen wideness
+
+$breakpoints: (
+    xs: 320px,
+    sm: 481px,
+    md: 769px,
+    lg: 1025px,
+    xl: 1201px,
+);
+
+// Declares container widths according to screen wideness
+
+$container-max-widths: (
+    xs: 520px,
+    sm: 540px,
+    md: 720px,
+    lg: 1140px,
+);
+
+// Declares colors
+
+$content-color: #000000;

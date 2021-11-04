@@ -1,0 +1,26 @@
+@import "./variables";
+@import "./fonts";
+@import "./mixins";
+
+html,
+body {
+    color: $content-color;
+}
+
+.container {
+    @include media-breakpoint("xs") {
+        @include make-container("xs");
+    }
+    @include media-breakpoint("sm") {
+        @include make-container("sm");
+    }
+    @include media-breakpoint("md") {
+        @include make-container("md");
+    }
+    @include media-breakpoint("lg") {
+        @include make-container("lg");
+    }
+    @include media-breakpoint("xl") {
+        @include make-container("lg");
+    }
+}
