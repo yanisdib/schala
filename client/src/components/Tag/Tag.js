@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Tag = styled.div`
     min-width: 100px;
     width: fit-content;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-align: center;
     padding: 10px 15px;
     background-color: ${props => props.variant === 'primary' ? '#ecf2ff' : '#fafafa'};
