@@ -1,5 +1,7 @@
 import { shallow } from 'enzyme';
+
 import { Header } from '../../../components';
+
 
 describe('Header component', () => {
     let wrapper;

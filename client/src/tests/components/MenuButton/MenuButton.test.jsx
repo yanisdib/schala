@@ -1,5 +1,7 @@
 import { shallow } from 'enzyme';
+
 import MenuButton from '../../../components/MenuButton/MenuButton';
+
 
 describe('MenuButton Component', () => {
     let wrapper, onMenuButtonClick;

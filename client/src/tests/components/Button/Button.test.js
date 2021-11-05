@@ -1,11 +1,13 @@
 import { shallow } from 'enzyme';
+
 import { Button } from '../../../components';
+
 
 describe('Button Component', () => {
     let wrapper;
     let defaultProps = Button.defaultProps.variant;
 
-    beforeEach(() => wrapper = shallow(<Button variant='primary'>Button</Button>));
+    beforeEach(() => wrapper = shallow(<Button variant="primary">Button</Button>));
 
     it('renders properly', () => {
         expect(wrapper).toMatchSnapshot();
