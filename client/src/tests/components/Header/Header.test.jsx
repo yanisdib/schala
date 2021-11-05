@@ -5,7 +5,7 @@ import { Header } from '../../../components';
 
 describe('Header component', () => {
     let wrapper;
-    let defaultProps = Header.defaultProps.isLogged;
+    let defaultProps = Header.defaultProps;
 
     beforeEach(() => wrapper = shallow(<Header />));
 
@@ -19,6 +19,6 @@ describe('Header component', () => {
     });
 
     it('renders properly with default props', () => {
-        expect(defaultProps).toBeFalsy();
+        expect(defaultProps.isLogged).toBeFalsy();
     });
 })

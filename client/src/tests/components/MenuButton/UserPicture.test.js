@@ -9,9 +9,9 @@ describe('UserPicture component', () => {
 
     it('renders properly', () => {
         expect(wrapper).toMatchSnapshot();
-    });
+    })
 
     it('renders with default picture props', () => {
         expect(defaultProps).toEqual('blank_profile.jpg');
-    });
-});
+    })
+})
