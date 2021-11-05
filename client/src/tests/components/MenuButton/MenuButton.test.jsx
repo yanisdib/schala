@@ -5,7 +5,7 @@ import MenuButton from '../../../components/MenuButton/MenuButton';
 
 describe('MenuButton Component', () => {
     let wrapper, onMenuButtonClick;
-    let defaultProps = MenuButton.defaultProps.onClick;
+    let defaultProps = MenuButton.defaultProps;
 
     beforeEach(() => {
         onMenuButtonClick = jest.fn(); // create a spy
@@ -17,7 +17,7 @@ describe('MenuButton Component', () => {
     });
 
     it('has default props defined', () => {
-        expect(defaultProps).toBeDefined();
+        expect(defaultProps.onClick).toBeDefined();
     })
 
     it('calls anonymous function by default on click', () => {
