@@ -8,7 +8,7 @@ import './styles.scss';
 function Header({ isLogged }) {
     if (!isLogged) {
         return (
-            <header className="container">
+            <header>
                 <div className="header-wrapper">
                     <div className="logo"></div>
                     <div className="signup-button">
