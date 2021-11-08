@@ -5,7 +5,7 @@ import { Header } from '../../../components';
 
 describe('Header component', () => {
     let wrapper;
-    let defaultProps = Header.defaultProps;
+    const defaultProps = Header.defaultProps;
 
     beforeEach(() => wrapper = shallow(<Header />));
 

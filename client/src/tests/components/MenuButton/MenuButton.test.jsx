@@ -5,10 +5,10 @@ import MenuButton from '../../../components/MenuButton/MenuButton';
 
 describe('MenuButton Component', () => {
     let wrapper, onMenuButtonClick;
-    let defaultProps = MenuButton.defaultProps;
+    const defaultProps = MenuButton.defaultProps;
 
     beforeEach(() => {
-        onMenuButtonClick = jest.fn(); // create a spy
+        onMenuButtonClick = jest.fn(); // creates a spy
         wrapper = shallow(<MenuButton onClick={onMenuButtonClick} />);
     })
 
