@@ -11,6 +11,7 @@ const HeaderAuthButton = styled.button`
     font-size: 0.95em;
     border: ${props => props.variant === 'login' ? 'none' : '1px solid #000000'};
     border-radius: 40px;
+    cursor: pointer;
 `;
 
 HeaderAuthButton.propTypes = {

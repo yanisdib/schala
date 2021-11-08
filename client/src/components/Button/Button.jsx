@@ -10,6 +10,7 @@ const Button = styled.button`
     border-radius: 40px;
     text-align: center;
     font-size: 0.95em;
+    cursor: pointer;
 `;
 
 Button.propTypes = {
