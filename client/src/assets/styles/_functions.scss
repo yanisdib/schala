@@ -1,0 +1,15 @@
+// Repeats a given character n times
+
+@function repeat-character($char, $times) {
+    $output: "";
+
+    @if $times == auto {
+        @return auto;
+    }
+
+    @for $i from 1 through $times {
+        $output: #{$char $output};
+    }
+
+    @return $output;
+}
