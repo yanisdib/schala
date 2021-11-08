@@ -5,7 +5,7 @@ import { Button } from '../../../components';
 
 describe('Button Component', () => {
     let wrapper;
-    let defaultProps = Button.defaultProps;
+    const defaultProps = Button.defaultProps;
 
     beforeEach(() => wrapper = shallow(<Button variant="primary">Button</Button>));
 

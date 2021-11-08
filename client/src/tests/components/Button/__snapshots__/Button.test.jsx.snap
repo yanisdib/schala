@@ -2,7 +2,7 @@
 
 exports[`Button Component renders properly 1`] = `
 <button
-  className="sc-gsTEea HRiTv"
+  className="sc-gsTEea ckhPwB"
 >
   Button
 </button>
