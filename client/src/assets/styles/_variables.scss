@@ -10,11 +10,16 @@ $gutter-y: 30px;
 // Declares breakpoints according to screen wideness
 
 $breakpoints: (
+    // Extra small devices (phones, 480px and down)
     xs: 320px,
+    // Small devices (portrait tablets and large phones, 480px and up)
     sm: 481px,
+    // Medium devices (landscape tablets, 768px and up)
     md: 769px,
+    // Large devices (laptops/desktops, 1024px and up)
     lg: 1025px,
-    xl: 1201px,
+    // Extra large devices (large laptops and desktops, 1200px and up)
+    xl: 1201px
 );
 
 // Declares container widths according to screen wideness
@@ -23,7 +28,8 @@ $container-max-widths: (
     xs: 520px,
     sm: 540px,
     md: 720px,
-    lg: 1140px,
+    lg: 75vw,
+    xl: 62.5vw,
 );
 
 // Declares colors
