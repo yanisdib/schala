@@ -1,9 +1,17 @@
+@import "./functions";
+
 // Allows responsive styles depending on user's device
 
 @mixin media-breakpoint($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
-        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-            @content;
+        @if $breakpoint == "xs" {
+            @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+                @content;
+            }
+        } @else {
+            @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+                @content;
+            }
         }
     }
 }
@@ -25,6 +33,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 30px;
+    column-gap: 30px;
 }
 
 // Creates a sizeable column inside a flex wrapper
@@ -32,5 +41,14 @@
 @mixin make-col($col-size) {
     display: flex;
     flex-direction: column;
-    flex-grow: $col-size;
+    flex: $col-size auto;
+}
+
+// Creates a grid with sizeable cells and rows
+
+@mixin make-grid($template) {
+    display: grid;
+    grid-template-columns: $template;
+    grid-gap: calc($gutter-x - 10px);
+    flex: 1;
 }
