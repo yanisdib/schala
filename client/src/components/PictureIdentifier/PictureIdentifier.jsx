@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { Bubble, Pointer, DisplayIdentifiedButton } from '..';
+import { Bubble, Pointer, DisplayIdentifiedPeopleButton } from '..';
 
 
 function PictureIdentifier({ image, items, identifiedPeople }) {
 
-    const [isDisplayed, setIsDisplayed] = useState(false);
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
+    const [isBubbleDisplayed, setIsBubbleDisplayed] = useState(false);
 
-    const displayIdentifiedPeople = () => {
-        setIsDisplayed(prevIsDiplayed => !prevIsDiplayed);
-    };
+    const displayIdentifiedPeople = () => setIsBubbleDisplayed(prevIsBubbleDiplayed => !prevIsBubbleDiplayed);
 
     return (
         <>            {
@@ -25,32 +24,34 @@ function PictureIdentifier({ image, items, identifiedPeople }) {
                 src={image}
                 alt={''}
                 title={''}
+                onLoad={() => setIsImageLoaded(true)}
             />
-            <DisplayIdentifiedButton onClick={displayIdentifiedPeople} />
-            {items.map((item, i) => <Pointer key={`pointer-${i}`} coordinates={item.coordinates} />)}
-            {isDisplayed && identifiedPeople
-                .map((person) => <Bubble key={person.username} coordinates={person.coordinates}>{person.username}</Bubble>)
+            <DisplayIdentifiedPeopleButton onClick={displayIdentifiedPeople} />
+            {isImageLoaded &&
+                items.map((item, i) => <Pointer key={`pointer-${i}`} coordinates={item.coordinates} />)}
+            {isBubbleDisplayed &&
+                identifiedPeople.map((person) => <Bubble key={person.username} coordinates={person.coordinates}>{person.username}</Bubble>)
             }
         </>
     );
 }
 
 PictureIdentifier.defaultProps = {
-    image: 'https://wwd.com/wp-content/uploads/2021/09/Dior-s22-GG-13-1.jpg?w=1024', // should be outfit.image
+    image: 'https://pbs.twimg.com/media/EpjlsCFW8AMJtO1.jpg', // should be outfit.image
     items: [ // should be outfit.items[i].coordinates
         {
-            coordinates: [25, 50],
+            coordinates: [20, 48],
         },
         {
-            coordinates: [75, 68],
+            coordinates: [75, 55],
         },
         {
-            coordinates: [46, 50],
+            coordinates: [46, 60],
         },
     ],
     identifiedPeople: [
         {
-            username: 'blackpink',
+            username: 'benzema',
             url: '',
             coordinates: [35.4, 50.8],
         },
@@ -60,7 +61,7 @@ PictureIdentifier.defaultProps = {
             coordinates: [28.4, 36.4],
         },
         {
-            username: 'diorbeauty',
+            username: 'gucci',
             url: '',
             coordinates: [17, 50],
         },
