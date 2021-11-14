@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagsSlider component renders correctly 1`] = `
+<div
+  className="tags-wrapper"
+>
+  <styled.div
+    translateValue={0}
+  >
+    <Tags />
+  </styled.div>
+  <SliderNavigationButton
+    isNext={true}
+    onClick={[Function]}
+    size={25}
+  />
+</div>
+`;
