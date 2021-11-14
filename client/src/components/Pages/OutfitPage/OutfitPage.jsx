@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import { Tag, PictureIdentifier } from '../..';
 
 import './styles.scss';
+import TagsSlider from '../../TagsSlider/TagsSlider';
 
 
 function OutfitPage() {
-    const tags = ['Runway', 'Luxury', 'Haute-couture', "Spring"];
+    const tags = ['Runway', 'Luxury', 'Haute-couture', "Spring", "Dior", "Gucci", "Football"];
 
     return (
         <div className="outfit">
@@ -18,7 +19,7 @@ function OutfitPage() {
                     </div>
                     <div className="outfit-selected-item-data">
                         <div className="tags">
-                            {tags.map((tag, i) => <Tag key={`tag-${i}`}>{tag}</Tag>)}
+                            <TagsSlider Tags={tagsProps => tags.map((tag, i) => <Tag key={`tag-${i}`} {...tagsProps}>{tag}</Tag>)} />
                         </div>
                     </div>
                 </div>
