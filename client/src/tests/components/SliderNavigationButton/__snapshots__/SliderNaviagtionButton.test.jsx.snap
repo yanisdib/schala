@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SliderNavigationButton component renders correctly 1`] = `
+<styled.div
+  isNext={true}
+  onClick={[Function]}
+  size={30}
+>
+  <ChevronRight />
+</styled.div>
+`;
