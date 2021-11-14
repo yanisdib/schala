@@ -6,7 +6,7 @@ const Tag = styled.div`
     min-width: 100px;
     width: fit-content;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     padding: 9px 15px;
     background-color: ${props => props.variant === 'primary' ? '#eeeeee' : '#fafafa'};
