@@ -7,7 +7,5 @@ describe('Bubble component', () => {
 
     beforeEach(() => wrapper = shallow(<Bubble />))
 
-    it('renders correctly', () => {
-        expect(wrapper).toMatchSnapshot();
-    })
+    it('renders correctly', () => expect(wrapper).toMatchSnapshot())
 })

@@ -5,19 +5,13 @@ import { Tag } from '../../../components';
 
 describe('Tag Component', () => {
     let wrapper;
-    const defaultProps = Tag.defaultProps;
+    const { variant } = Tag.defaultProps;
 
-    beforeEach(() => wrapper = shallow(<Tag>Hello</Tag>));
+    beforeEach(() => wrapper = shallow(<Tag>Hello</Tag>))
 
-    it('renders properly', () => {
-        expect(wrapper).toMatchSnapshot();
-    })
+    it('renders properly', () => expect(wrapper).toMatchSnapshot())
 
-    it('renders with children text properly', () => {
-        expect(wrapper.text()).toEqual('Hello');
-    })
+    it('renders with children text properly', () => expect(wrapper.text()).toEqual('Hello'))
 
-    it('has a defaultProps', () => {
-        expect(defaultProps.variant).toEqual('primary');
-    })
+    it('has a defaultProps', () => expect(variant).toEqual('primary'))
 })

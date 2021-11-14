@@ -5,19 +5,13 @@ import { Button } from '../../../components';
 
 describe('Button Component', () => {
     let wrapper;
-    const defaultProps = Button.defaultProps;
+    const { variant } = Button.defaultProps;
 
-    beforeEach(() => wrapper = shallow(<Button variant="primary">Button</Button>));
+    beforeEach(() => wrapper = shallow(<Button variant="primary">Button</Button>))
 
-    it('renders properly', () => {
-        expect(wrapper).toMatchSnapshot();
-    })
+    it('renders properly', () => expect(wrapper).toMatchSnapshot())
 
-    it('renders with default props properly', () => {
-        expect(defaultProps.variant).toEqual('primary');
-    })
+    it('renders with default props properly', () => expect(variant).toEqual('primary'))
 
-    it('renders with children text properly', () => {
-        expect(wrapper.text()).toEqual('Button');
-    })
+    it('renders with children text properly', () => expect(wrapper.text()).toEqual('Button'))
 })

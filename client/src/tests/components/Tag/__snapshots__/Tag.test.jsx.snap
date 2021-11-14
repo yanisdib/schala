@@ -2,7 +2,7 @@
 
 exports[`Tag Component renders properly 1`] = `
 <div
-  className="sc-iBPTik ljAoSl"
+  className="sc-iBPTik bOvTbu"
 >
   Hello
 </div>

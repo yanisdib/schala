@@ -1,17 +1,15 @@
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
+
 import UserPicture from '../../../components/MenuButton/UserPicture';
+
 
 describe('UserPicture component', () => {
     let wrapper;
-    const defaultProps = UserPicture.defaultProps.picture;
+    const { picture } = UserPicture.defaultProps;
 
-    beforeEach(() => wrapper = mount(<UserPicture />));
+    beforeEach(() => wrapper = shallow(<UserPicture />))
 
-    it('renders properly', () => {
-        expect(wrapper).toMatchSnapshot();
-    })
+    it('renders properly', () => expect(wrapper).toMatchSnapshot())
 
-    it('renders with default picture props', () => {
-        expect(defaultProps).toEqual('blank_profile.jpg');
-    })
+    it('renders with default picture props', () => expect(picture).toEqual('blank_profile.jpg'))
 })

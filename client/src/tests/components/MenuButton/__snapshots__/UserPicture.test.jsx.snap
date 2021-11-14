@@ -1,11 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`UserPicture component renders properly 1`] = `
-<styled.div
-  picture="blank_profile.jpg"
->
-  <div
-    className="sc-bdfBQB drxxLc"
-  />
-</styled.div>
+<div
+  className="sc-bdfBQB drxxLc"
+/>
 `;
