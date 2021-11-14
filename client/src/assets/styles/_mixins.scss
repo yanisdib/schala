@@ -42,6 +42,7 @@
     display: flex;
     flex-direction: column;
     flex: $col-size auto;
+    flex-wrap: nowrap;
 }
 
 // Creates a grid with sizeable cells and rows
