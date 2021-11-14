@@ -4,7 +4,6 @@
 
 @import "../../components/Pages/OutfitPage/styles.scss";
 
-
 html,
 body {
     font-family: $primary-font;
@@ -33,30 +32,38 @@ body {
     }
 }
 
+
 //** Tags **/
 
 %tags {
-    font-family: "Poppins", sans-serif;
+    font-family: $tag-font;
     display: inline-flex;
-
-    > div {
-        margin: 0px 5px;
-
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
+    justify-content: center;
 }
 
 .tags {
     @include make-row();
     @extend %tags;
 
-    column-gap: 0;
+    width: inherit;
+
+    &-wrapper {
+        display: inline-flex;
+        position: relative;
+        max-width: inherit;
+        overflow: hidden;
+        white-space: nowrap;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 18%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent -5%, #fff 100%);
+        }
+    }
 }
 
 //** Buttons **/
