@@ -26,11 +26,11 @@ const Pointer = styled.div`
 Pointer.defaultProps = {
     coordinates: [],
     onClick: () => { },
-};
+}
 
 Pointer.propTypes = {
     coordinates: PropTypes.arrayOf(PropTypes.number).isRequired,
     onClick: PropTypes.func.isRequired,
-};
+}
 
 export default Pointer;
