@@ -28,11 +28,11 @@ function Header({ isLogged }) {
 
 Header.defaultProps = {
     isLogged: false,
-};
+}
 
 Header.propTypes = {
     isLogged: PropTypes.bool.isRequired,
-};
+}
 
 export default Header;
 

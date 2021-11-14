@@ -38,10 +38,10 @@ function MenuButton({ userPicture, onClick }) {
 
 MenuButton.defaultProps = {
     onClick: () => { },
-};
+}
 
 MenuButton.propTypes = {
     onClick: PropTypes.func,
-};
+}
 
 export default MenuButton;

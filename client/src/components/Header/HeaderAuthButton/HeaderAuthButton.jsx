@@ -16,11 +16,11 @@ const HeaderAuthButton = styled.button`
 
 HeaderAuthButton.propTypes = {
     variant: PropTypes.string,
-};
+}
 
 HeaderAuthButton.defaultProps = {
     variant: 'default',
-};
+}
 
 export default HeaderAuthButton;
 

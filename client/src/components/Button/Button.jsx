@@ -15,10 +15,10 @@ const Button = styled.button`
 
 Button.propTypes = {
     variant: PropTypes.string.isRequired,
-};
+}
 
 Button.defaultProps = {
     variant: 'primary',
-};
+}
 
 export default Button;
