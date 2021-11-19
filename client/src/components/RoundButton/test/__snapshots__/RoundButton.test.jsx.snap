@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoundButton component renders correctly without crashing 1`] = `
+<button
+  className="sc-bdfBQB cnLAJQ"
+>
+  Hello
+</button>
+`;
