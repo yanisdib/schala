@@ -13,6 +13,7 @@ function TagsSlider({ Tags }) {
     const [isNextButtonDisplayed, setIsNextButtonDisplayed] = useState(true);
     const [isPreviousButtonDisplayed, setIsPreviousButtonDisplayed] = useState(false);
 
+
     useEffect(() => {
         setSliderWidth(sliderRef.current.offsetWidth);
         translateValue >= sliderWidth / 2 ? setIsNextButtonDisplayed(false) : setIsNextButtonDisplayed(true);
@@ -37,8 +38,18 @@ function TagsSlider({ Tags }) {
             <Slider ref={sliderRef} translateValue={translateValue}>
                 <Tags />
             </Slider>
-            {isNextButtonDisplayed && <SliderNavigationButton size={25} onClick={onNextButtonClick} isNext />}
-            {isPreviousButtonDisplayed && <SliderNavigationButton size={25} onClick={onPreviousButtonClick} isNext={false} />}
+            {isNextButtonDisplayed &&
+                <SliderNavigationButton
+                    size={25}
+                    onClick={onNextButtonClick}
+                    isNext
+                />}
+            {isPreviousButtonDisplayed &&
+                <SliderNavigationButton
+                    size={25}
+                    onClick={onPreviousButtonClick}
+                    isNext={false}
+                />}
         </div>
     );
 }
