@@ -2,12 +2,13 @@
 @import "./fonts";
 @import "./mixins";
 
-@import "../../components/Pages/OutfitPage/styles.scss";
 
 html,
 body {
     font-family: $primary-font;
     color: $content-color;
+    text-rendering: optimizeLegibility;
+    
 }
 
 .container {
@@ -32,6 +33,21 @@ body {
     }
 }
 
+// Titles
+
+.title {
+    font-weight: 800;
+    margin: 0;
+}
+
+.subtitle {
+    margin: 5px 0;
+}
+
+.price {
+    font-size: 1.15em;
+    font-weight: 600;
+}
 
 //** Tags **/
 
@@ -59,7 +75,16 @@ body {
             position: absolute;
             top: 0;
             right: 0;
-            width: 18%;
+            width: 5%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent -5%, #fff 100%);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5%;
             height: 100%;
             background: linear-gradient(90deg, transparent -5%, #fff 100%);
         }
