@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Button = styled.button`
     width: auto;
     padding: 10px 20px;
-    background-color: ${props => props.variant === 'primary' ? '#fda5dd' : 'transparent'};
+    background-color: ${props => props.variant === 'primary' ? '#000000' : 'transparent'};
     color: ${props => props.variant === 'primary' ? '#ffffff' : '#000000'};
     border: ${props => props.variant === 'primary' ? 'none' : '1px solid #000000'};
     border-radius: 40px;
