@@ -1,0 +1,150 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.outfit {
+    height: 100vh;
+    margin: calc($gutter-y * 2) 0;
+
+    &-data {
+        height: 100%;
+
+        &-wrapper {
+            @include make-row();
+            flex-wrap: nowrap;
+        }
+    }
+
+    &-identifier {
+        // TODO: make a responsive square of 100% the parent's width for width:height
+        @include media-breakpoint("xs") {
+            @include make-col(1 0);
+            width: 480px;
+            height: 480px;
+            align-content: center;
+        }
+        @include media-breakpoint("sm") {
+            @include make-col(1 0);
+            width: 540px;
+            height: 540px;
+            align-content: center;
+        }
+
+        @include media-breakpoint("md") {
+            @include make-col(1 0);
+            width: 710px;
+            height: 710px;
+            align-content: center;
+        }
+
+        @include media-breakpoint("lg") {
+            @include make-col(1 0);
+            width: 37.5vw;
+            height: 37.5vw;
+        }
+
+        @include media-breakpoint("xl") {
+            @include make-col(1 0);
+            width: 30vw;
+            height: 30vw;
+        }
+
+        position: relative;
+        background-color: black;
+        justify-self: center;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-selected-item-data {
+        @include media-breakpoint("xs") {
+            @include make-col(0);
+            align-items: flex-start;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        @include media-breakpoint("sm") {
+            @include make-col(0);
+            align-items: flex-start;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        @include media-breakpoint("md") {
+            @include make-col(0);
+            align-items: flex-start;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        @include media-breakpoint("lg") {
+            @include make-col(0);
+            align-items: flex-start;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        @include media-breakpoint("xl") {
+            @include make-col(0);
+            align-items: flex-start;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .tags {
+            margin-bottom: calc($gutter-y - 20px);
+        }
+
+        p,
+        button {
+            margin: 10px 0;
+        }
+
+        .geolocation {
+            margin: 20px 0;
+            color: #0066ff;
+            font-weight: 500;
+        }
+    }
+
+    &-spotter-banner {
+        @include make-row();
+
+        width: 30vw;
+        height: 90px;
+        background-color: #dce0e6;
+        margin: $gutter-y 0;
+        justify-items: center;
+        align-content: center;
+        border-radius: 15px;
+
+        .user-picture-thumbnail {
+            @include make-col(0 1);
+
+            width: 70px;
+            height: 70px;
+            background-color: #000000;
+            margin: 0 calc($gutter-x - 15px);
+            border-radius: 15px;
+
+            img {
+                border-radius: 15px;
+            }
+        }
+    }
+
+    &-social-features {
+        @include make-row();
+
+        display: inline-flex;
+
+        .social-buttons {
+            
+        }
+    }
+}
