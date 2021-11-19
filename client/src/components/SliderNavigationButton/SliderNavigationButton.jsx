@@ -5,7 +5,7 @@ import { ChevronLeft } from '@styled-icons/feather/ChevronLeft';
 import { ChevronRight } from '@styled-icons/feather/ChevronRight';
 
 
-const Button = styled.div`
+const NavigationButton = styled.div`
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -30,9 +30,9 @@ const Button = styled.div`
 
 function SliderNavigationButton({ size, isNext, onClick }) {
     return (
-        <Button size={size} isNext={isNext} onClick={onClick}>
+        <NavigationButton size={size} isNext={isNext} onClick={onClick}>
             {isNext ? <ChevronRight /> : <ChevronLeft />}
-        </Button>
+        </NavigationButton>
     );
 }
 
