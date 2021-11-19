@@ -1,0 +1,1 @@
+export const compareArrays = (a = [], b = []) => JSON.stringify(a) === JSON.stringify(b);

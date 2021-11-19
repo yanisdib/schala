@@ -1,8 +1,10 @@
-import { BrowserRouter as Router } from 'react-router-dom';
 import { Switch, Route } from 'react-router';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 import App from '../App';
 import { Header } from '../components';
-import OutfitPage from '../components/Pages/OutfitPage/OutfitPage';
+import { Outfit } from '../pages';
+
 
 function AppRouter() {
     return (
@@ -11,11 +13,12 @@ function AppRouter() {
             <main>
                 <Switch>
                     <Route component={App} path="/" exact />
-                    <Route component={OutfitPage} path="/outfit" />
+                    <Route component={Outfit} path="/outfit" />
                 </Switch>
             </main>
         </Router>
     );
 }
+
 
 export default AppRouter;

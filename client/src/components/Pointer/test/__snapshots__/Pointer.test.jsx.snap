@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pointer component renders correctly 1`] = `
+<div
+  className="sc-fubCzh evwLvu"
+  onClick={[MockFunction]}
+/>
+`;

@@ -1,0 +1,1 @@
+export { default as Outfit } from './Outfit/Outfit';
