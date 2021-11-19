@@ -1,10 +1,10 @@
-// COMPONENTS EXPORTS
-
 export { default as Header } from './Header/Header';
+export { default as Footer } from './Footer/Footer';
 
 export { default as PictureIdentifier } from './PictureIdentifier/PictureIdentifier';
 
 export { default as Button } from './Button/Button';
+export { default as RoundButton } from './RoundButton/RoundButton';
 export { default as MenuButton } from './MenuButton/MenuButton';
 export { default as DisplayIdentifiedPeopleButton } from './DisplayIdentifiedPeopleButton/DisplayIdentifiedPeopleButton';
 
