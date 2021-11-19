@@ -8,9 +8,9 @@ const Tag = styled.div`
     font-size: 0.95rem;
     font-weight: 600;
     text-align: center;
-    padding: 9px 15px;
+    padding: 8px 15px;
     background-color: ${props => props.variant === 'primary' ? '#eeeeee' : '#fafafa'};
-    color: ${props => props.variant === 'primary' ? '#5c5c5c' : '#000000'};
+    color: ${props => props.variant === 'primary' ? '#000000' : '#000000'};
     border: 1px solid ${props => props.variant === 'primary' ? '#d1d1d1' : '#000000'};
     border-radius: 25px;
     cursor: pointer;
