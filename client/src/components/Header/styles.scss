@@ -2,7 +2,7 @@
 @import "../../assets/styles/mixins";
 
 header {
-    margin: 30px 0px;
+    margin: $gutter-y 0px;
     padding: 0px $gutter-x;
 
     .header-wrapper {
