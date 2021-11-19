@@ -8,11 +8,11 @@ const Button = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;    
-    width: 37px;
-    height: 37px;
+    width: 32px;
+    height: 32px;
     position: absolute;
-    bottom: 20px;
-    right: 25px;
+    bottom: 15px;
+    right: 15px;
     color: white;
     background-color: #00000094;
     border-radius: 2rem;
@@ -20,12 +20,16 @@ const Button = styled.div`
 `;
 
 const UserIcon = styled(User)`
-    height: 19px;
+    height: 16px;
     stroke-width: 2px;
 `;
 
 function DisplayIdentifiedPeopleButton({ onClick }) {
-    return <Button onClick={onClick}><UserIcon /></Button>;
+    return (
+        <Button onClick={onClick}>
+            <UserIcon />
+        </Button>
+    );
 }
 
 
