@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-import { MenuButton } from '../';
-import HeaderAuthButton from './HeaderAuthButton/HeaderAuthButton';
+import { Button, MenuButton } from '../';
 
 import './styles.scss';
+
 
 function Header({ isLogged }) {
     if (!isLogged) {
@@ -12,10 +12,10 @@ function Header({ isLogged }) {
                 <div className="header-wrapper">
                     <div className="logo"></div>
                     <div className="signup-button">
-                        <HeaderAuthButton>Signup</HeaderAuthButton>
+                        <Button>Signup</Button>
                     </div>
                     <div className="signin-button">
-                        <HeaderAuthButton variant="login">Login</HeaderAuthButton>
+                        <Button>Login</Button>
                     </div>
                     <div className="header-menu-button">
                         <MenuButton />
@@ -25,6 +25,7 @@ function Header({ isLogged }) {
         );
     }
 }
+
 
 Header.defaultProps = {
     isLogged: false,
