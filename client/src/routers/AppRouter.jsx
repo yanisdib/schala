@@ -2,7 +2,7 @@ import { Switch, Route } from 'react-router';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from '../App';
-import { Header } from '../components';
+import { Footer, Header } from '../components';
 import { Outfit } from '../pages';
 
 
@@ -16,6 +16,7 @@ function AppRouter() {
                     <Route component={Outfit} path="/outfit" />
                 </Switch>
             </main>
+            <Footer />
         </Router>
     );
 }
