@@ -20,6 +20,7 @@
 
 @mixin make-container($breakpoint) {
     @if map-has-key($container-max-widths, $breakpoint) {
+        width: #{map-get($container-max-widths, $breakpoint)};
         max-width: #{map-get($container-max-widths, $breakpoint)};
         margin-right: auto;
         margin-left: auto;
