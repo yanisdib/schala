@@ -54,7 +54,7 @@ body {
 %tags {
     font-family: $tag-font;
     display: inline-flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .tags {
