@@ -36,8 +36,7 @@ const SmallBellOff = styled(Bell)`
 `;
 
 
-function Outfit() {
-    const tags = ['Runway', 'Luxury', 'Haute-couture', "Spring", "Dior", "Gucci", "Football"];
+function Outfit({ tags }) {
 
     return (
         <div className="outfit">
@@ -93,12 +92,20 @@ function Outfit() {
     );
 }
 
+
 Outfit.defaultProps = {
-
+    tags: [
+        'Runway',
+        'Luxury',
+        'Haute-couture',
+        "Spring",
+        "Dior",
+        "Gucci",
+        "Football"
+    ]
 }
 
-Outfit.propTypes = {
+Outfit.propTypes = { tags: PropTypes.arrayOf(PropTypes.string) }
 
-}
 
 export default Outfit;
