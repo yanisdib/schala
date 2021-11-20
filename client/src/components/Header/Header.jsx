@@ -6,34 +6,35 @@ import './styles.scss';
 
 
 function Header({ isLogged }) {
-    if (!isLogged) {
-        return (
-            <header>
-                <div className="header-wrapper">
-                    <div className="logo"></div>
-                    <div className="signup-button">
-                        <Button>Signup</Button>
-                    </div>
-                    <div className="signin-button">
-                        <Button>Login</Button>
-                    </div>
-                    <div className="header-menu-button">
-                        <MenuButton />
-                    </div>
+    return (
+        <header>
+            <div className="header-wrapper">
+                <div className="logo">
+                    <h3>SCHALA PROJECT DEV.</h3>
                 </div>
-            </header>
-        );
-    }
+                {!isLogged && (
+                    <>
+                        <div className="signup-button">
+                            <Button>Signup</Button>
+                        </div>
+                        <div className="signin-button">
+                            <Button>Login</Button>
+                        </div>
+                    </>
+                )}
+                <div className="header-menu-button">
+                    <MenuButton />
+                </div>
+            </div>
+        </header>
+    );
 }
 
 
-Header.defaultProps = {
-    isLogged: false,
-}
+Header.defaultProps = { isLogged: false }
 
-Header.propTypes = {
-    isLogged: PropTypes.bool.isRequired,
-}
+Header.propTypes = { isLogged: PropTypes.bool.isRequired }
+
 
 export default Header;
 

@@ -1,5 +1,6 @@
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
 
 const Button = styled.button`
     width: auto;
@@ -13,12 +14,10 @@ const Button = styled.button`
     cursor: pointer;
 `;
 
-Button.propTypes = {
-    variant: PropTypes.string.isRequired,
-}
 
-Button.defaultProps = {
-    variant: 'primary',
-}
+Button.propTypes = { variant: PropTypes.string.isRequired }
+
+Button.defaultProps = { variant: 'primary' }
+
 
 export default Button;

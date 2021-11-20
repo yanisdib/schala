@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import defaultPicture from '../../assets/images/blank_profile.jpg';
 
+
 const UserPicture = styled.div`
     width: 30px;
     height: 30px;
@@ -14,12 +15,10 @@ const UserPicture = styled.div`
     margin-left: 10px;
 `;
 
-UserPicture.defaultProps = {
-    picture: defaultPicture,
-}
 
-UserPicture.propTypes = {
-    picture: PropTypes.string,
-}
+UserPicture.defaultProps = { picture: defaultPicture }
+
+UserPicture.propTypes = { picture: PropTypes.string }
+
 
 export default UserPicture;

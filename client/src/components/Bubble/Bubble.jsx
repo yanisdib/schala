@@ -38,12 +38,10 @@ const Bubble = styled.div`
     }
 `;
 
-Bubble.defaultProps = {
-    coordinates: [],
-}
 
-Bubble.propTypes = {
-    coordinates: PropTypes.arrayOf(Number).isRequired,
-}
+Bubble.defaultProps = { coordinates: [] }
+
+Bubble.propTypes = { coordinates: PropTypes.arrayOf(Number).isRequired, }
+
 
 export default Bubble;

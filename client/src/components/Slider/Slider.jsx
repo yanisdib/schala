@@ -1,4 +1,3 @@
-import { Component, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -27,12 +26,8 @@ const Slider = styled.div`
     }
 `;
 
-Slider.defaultProps = {
-    translateValue: 0,
-}
+Slider.defaultProps = { translateValue: 0 }
 
-Slider.propTypes = {
-    translateValue: PropTypes.number.isRequired,
-}
+Slider.propTypes = { translateValue: PropTypes.number.isRequired }
 
 export default Slider;

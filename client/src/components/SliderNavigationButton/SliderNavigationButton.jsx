@@ -36,6 +36,7 @@ function SliderNavigationButton({ size, isNext, onClick }) {
     );
 }
 
+
 SliderNavigationButton.defaultProps = {
     size: 30,
     isNext: true,

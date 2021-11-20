@@ -27,6 +27,7 @@ const MenuIcon = styled(Icon)`
     stroke-width: 1.5px;
 `;
 
+
 function MenuButton({ userPicture, onClick }) {
     return (
         <Button onClick={onClick}>
@@ -36,12 +37,10 @@ function MenuButton({ userPicture, onClick }) {
     );
 }
 
-MenuButton.defaultProps = {
-    onClick: () => { },
-}
 
-MenuButton.propTypes = {
-    onClick: PropTypes.func,
-}
+MenuButton.defaultProps = { onClick: () => { } }
+
+MenuButton.propTypes = { onClick: PropTypes.func }
+
 
 export default MenuButton;

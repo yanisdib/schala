@@ -36,6 +36,7 @@ function PictureIdentifier({ image, items, identifiedPeople }) {
     );
 }
 
+
 PictureIdentifier.defaultProps = {
     image: 'https://pbs.twimg.com/media/EpjlsCFW8AMJtO1.jpg', // should be outfit.image
     items: [ // should be outfit.items[i].coordinates
@@ -73,5 +74,6 @@ PictureIdentifier.propTypes = {
     items: PropTypes.arrayOf(PropTypes.object).isRequired,
     identifiedPeople: PropTypes.arrayOf(PropTypes.object),
 }
+
 
 export default PictureIdentifier;

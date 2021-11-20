@@ -16,12 +16,10 @@ const Tag = styled.div`
     cursor: pointer;
 `;
 
-Tag.defaultProps = {
-    variant: 'primary',
-}
 
-Tag.propTypes = {
-    variant: PropTypes.string.isRequired,
-}
+Tag.defaultProps = { variant: 'primary' }
+
+Tag.propTypes = { variant: PropTypes.string.isRequired }
+
 
 export default Tag;
