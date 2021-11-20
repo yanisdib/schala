@@ -1,0 +1,41 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+footer {
+    @include make-row();
+
+    min-height: 400px;
+
+    .footer {
+        @include make-col(0 1);
+
+        &-wrapper {
+            @include make-row();
+        }
+
+        &-content {
+            @include make-grid(1fr 1fr 1fr 1fr);
+        }
+
+        &-copyrights {
+            @include make-row();
+
+            height: 200px;
+
+            p{
+                line-height: 2em;
+            }
+        }
+
+        &-item {
+            width: auto;
+            ul {
+                padding-left: 0;
+                > li {
+                    list-style: none;
+                    line-height: 2.2em;
+                }
+            }
+        }
+    }
+}
