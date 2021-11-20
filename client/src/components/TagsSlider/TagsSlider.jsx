@@ -16,51 +16,60 @@ function TagsSlider({ Tags }) {
 
     useEffect(() => {
         setSliderWidth(sliderRef.current.offsetWidth);
-        translateValue >= sliderWidth / 2 ? setIsNextButtonDisplayed(false) : setIsNextButtonDisplayed(true);
+
+        translateValue > sliderWidth / 2 ? (
+            setIsNextButtonDisplayed(false)
+        ) : (
+            setIsNextButtonDisplayed(true)
+        );
+
         translateValue > 0 ? setIsPreviousButtonDisplayed(true) : setIsPreviousButtonDisplayed(false);
     }, [sliderRef, translateValue, sliderWidth]);
 
+
     const onNextButtonClick = () => {
-        if (translateValue >= 0 && translateValue < sliderWidth) {
-            setTranslateValue(prevTranslateValue => prevTranslateValue + (sliderWidth / 4));
-        }
+        if (translateValue < 0) return;
+        setTranslateValue(prevTranslateValue => prevTranslateValue + (sliderWidth / 4));
     };
 
     const onPreviousButtonClick = () => {
-        if (translateValue >= 0 && translateValue < sliderWidth) {
-            setTranslateValue(prevTranslateValue => prevTranslateValue - (sliderWidth / 4));
-        }
-        translateValue < 0 && setTranslateValue(0);
+        if (translateValue < 0) setTranslateValue(0);
+        setTranslateValue(prevTranslateValue => prevTranslateValue - (sliderWidth / 4));
     };
+
+    console.log(typeof Tags);
+
 
     return (
         <div className="tags-wrapper">
             <Slider ref={sliderRef} translateValue={translateValue}>
                 <Tags />
             </Slider>
-            {isNextButtonDisplayed &&
+
+            {isNextButtonDisplayed && (
                 <SliderNavigationButton
                     size={25}
                     onClick={onNextButtonClick}
                     isNext
-                />}
-            {isPreviousButtonDisplayed &&
+                />
+            )}
+
+            {isPreviousButtonDisplayed && (
                 <SliderNavigationButton
                     size={25}
                     onClick={onPreviousButtonClick}
                     isNext={false}
-                />}
+                />
+            )}
         </div>
     );
 }
 
-TagsSlider.defaultProps = {
-    Tags: () => null,
-}
 
-TagsSlider.propTypes = {
-    Tags: PropTypes.func,
-}
+TagsSlider.defaultProps = { Tags: () => [] }
+
+TagsSlider.propTypes = { Tags: PropTypes.func }
+
 
 export default TagsSlider;
 
