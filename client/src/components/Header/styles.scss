@@ -87,7 +87,7 @@ header {
         .header-menu-button {
             @include make-col(2);
 
-            align-items: end;
+            align-items: flex-end;
         }
     }
 }
