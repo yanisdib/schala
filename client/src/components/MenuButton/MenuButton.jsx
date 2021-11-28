@@ -40,7 +40,7 @@ function MenuButton({ userPicture, onClick }) {
 
 MenuButton.defaultProps = { onClick: () => { } }
 
-MenuButton.propTypes = { onClick: PropTypes.func }
+MenuButton.propTypes = { onClick: PropTypes.func.isRequired }
 
 
 export default MenuButton;
