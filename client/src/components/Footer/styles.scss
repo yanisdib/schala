@@ -5,9 +5,12 @@ footer {
     @include make-row();
 
     min-height: 400px;
+    height: fit-content;
 
     .footer {
         @include make-col(0 1);
+
+        padding-top: calc($gutter-y * 3);
 
         &-wrapper {
             @include make-row();
@@ -20,9 +23,9 @@ footer {
         &-copyrights {
             @include make-row();
 
-            height: 200px;
+            height: fit-content;
 
-            p{
+            p {
                 line-height: 2em;
             }
         }
