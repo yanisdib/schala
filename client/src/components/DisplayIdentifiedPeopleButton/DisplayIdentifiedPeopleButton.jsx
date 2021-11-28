@@ -36,7 +36,7 @@ function DisplayIdentifiedPeopleButton({ onClick }) {
 
 DisplayIdentifiedPeopleButton.defaultProps = { onClick: () => { } }
 
-DisplayIdentifiedPeopleButton.propTypes = { onClick: PropTypes.func.isRequired, }
+DisplayIdentifiedPeopleButton.propTypes = { onClick: PropTypes.func.isRequired }
 
 
 export default DisplayIdentifiedPeopleButton;
