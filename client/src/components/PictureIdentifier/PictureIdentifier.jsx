@@ -30,7 +30,11 @@ function PictureIdentifier({ image, items, identifiedPeople }) {
             {isImageLoaded &&
                 items.map((item, i) => <Pointer key={`pointer-${i}`} coordinates={item.coordinates} />)}
             {isBubbleDisplayed &&
-                identifiedPeople.map((person) => <Bubble key={person.username} coordinates={person.coordinates}>{person.username}</Bubble>)
+                identifiedPeople.map((person) => (
+                    <Bubble key={person.username} coordinates={person.coordinates}>
+                        {person.username}
+                    </Bubble>
+                ))
             }
         </>
     );
