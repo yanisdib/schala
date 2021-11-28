@@ -5,14 +5,14 @@ import { Button, MenuButton } from '../';
 import './styles.scss';
 
 
-function Header({ isLogged }) {
+function Header({ isAuthenticated }) {
     return (
         <header>
             <div className="header-wrapper">
                 <div className="logo">
                     <h3>SCHALA PROJECT DEV.</h3>
                 </div>
-                {!isLogged && (
+                {!isAuthenticated && (
                     <>
                         <div className="signup-button">
                             <Button>Signup</Button>
@@ -31,9 +31,9 @@ function Header({ isLogged }) {
 }
 
 
-Header.defaultProps = { isLogged: false }
+Header.defaultProps = { isAuthenticated: false }
 
-Header.propTypes = { isLogged: PropTypes.bool.isRequired }
+Header.propTypes = { isAuthenticated: PropTypes.bool.isRequired }
 
 
 export default Header;
