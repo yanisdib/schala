@@ -7,21 +7,38 @@ import { Slider, SliderNavigationButton } from '../';
 function TagsSlider({ Tags }) {
 
     const sliderRef = useRef(null);
+    const tagRef = useRef(null);
 
     const [sliderWidth, setSliderWidth] = useState(0);
+    const [sliderParts, setSliderParts] = useState(0);
+    const [tagWidth, setTagWidth] = useState(0);
     const [translateValue, setTranslateValue] = useState(0);
     const [isNextButtonDisplayed, setIsNextButtonDisplayed] = useState(true);
     const [isPreviousButtonDisplayed, setIsPreviousButtonDisplayed] = useState(false);
 
 
+    console.log(translateValue)
+
+    // TODO: Change and refactor algorithm of slider to take account of length of tags array
+    // SKETCH CODE TO BE REFACTORED AND CLEANED
+
     useEffect(() => {
         setSliderWidth(sliderRef.current.offsetWidth);
+        Tags && setTagWidth(tagRef.current.offsetWidth);
+        console.log(`slider: ${sliderWidth} | tags: ${tagWidth}`);
 
-        translateValue > sliderWidth / 2 ? (
+        const sliderChildren = sliderRef.current.childElementCount
+        const sliderChildrenFitting = sliderWidth / tagWidth;
+        setSliderParts(Math.round(sliderChildren / sliderChildrenFitting));
+
+        // TODO: if sliderChildren < sliderChildrenFitting => translateValue >= sliderWidth / 4
+        translateValue >= sliderWidth ? (
             setIsNextButtonDisplayed(false)
         ) : (
             setIsNextButtonDisplayed(true)
         );
+
+        sliderChildren < sliderChildrenFitting && setIsNextButtonDisplayed(false);
 
         translateValue > 0 ? setIsPreviousButtonDisplayed(true) : setIsPreviousButtonDisplayed(false);
     }, [sliderRef, translateValue, sliderWidth]);
@@ -29,21 +46,18 @@ function TagsSlider({ Tags }) {
 
     const onNextButtonClick = () => {
         if (translateValue < 0) return;
-        setTranslateValue(prevTranslateValue => prevTranslateValue + (sliderWidth / 4));
+        setTranslateValue(prevTranslateValue => prevTranslateValue + sliderWidth / sliderParts);
     };
 
     const onPreviousButtonClick = () => {
         if (translateValue < 0) setTranslateValue(0);
-        setTranslateValue(prevTranslateValue => prevTranslateValue - (sliderWidth / 4));
+        setTranslateValue(prevTranslateValue => prevTranslateValue - sliderWidth / sliderParts);
     };
-
-    console.log(typeof Tags);
-
 
     return (
         <div className="tags-wrapper">
             <Slider ref={sliderRef} translateValue={translateValue}>
-                <Tags />
+                <Tags ref={tagRef} />
             </Slider>
 
             {isNextButtonDisplayed && (
