@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 
+// Props will change to make the Button reusable
+// These are just for UI tests
 const RoundButton = styled.button`
     width: ${props => props.size ? props.size : 35}px;
     height: ${props => props.size ? props.size : 35}px;
