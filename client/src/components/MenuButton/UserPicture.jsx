@@ -18,7 +18,7 @@ const UserPicture = styled.div`
 
 UserPicture.defaultProps = { picture: defaultPicture }
 
-UserPicture.propTypes = { picture: PropTypes.string }
+UserPicture.propTypes = { picture: PropTypes.string.isRequired }
 
 
 export default UserPicture;
