@@ -6,11 +6,12 @@
     margin: calc($gutter-y * 2) 0;
 
     &-data {
-        height: 100%;
+        height: auto;
 
         &-wrapper {
             @include make-row();
             flex-wrap: nowrap;
+            column-gap: 50px;
         }
     }
 
@@ -21,12 +22,14 @@
             width: 480px;
             height: 480px;
             align-content: center;
+            border-radius: 15px;
         }
         @include media-breakpoint("sm") {
             @include make-col(1 0);
             width: 540px;
             height: 540px;
             align-content: center;
+            border-radius: 15px;
         }
 
         @include media-breakpoint("md") {
@@ -34,18 +37,21 @@
             width: 710px;
             height: 710px;
             align-content: center;
+            border-radius: 15px;
         }
 
         @include media-breakpoint("lg") {
             @include make-col(1 0);
             width: 37.5vw;
             height: 37.5vw;
+            border-radius: 15px;
         }
 
         @include media-breakpoint("xl") {
             @include make-col(1 0);
             width: 30vw;
             height: 30vw;
+            border-radius: 15px;
         }
 
         position: relative;
@@ -57,6 +63,7 @@
             object-position: center;
             width: 100%;
             height: 100%;
+            border-radius: 15px;
         }
     }
 
@@ -115,6 +122,7 @@
     &-spotter-banner {
         @include make-row();
 
+        position: relative;
         width: 30vw;
         height: 90px;
         background-color: #dce0e6;
@@ -126,25 +134,87 @@
         .user-picture-thumbnail {
             @include make-col(0 1);
 
-            width: 70px;
-            height: 70px;
+            position: relative;
             background-color: #000000;
             margin: 0 calc($gutter-x - 15px);
             border-radius: 15px;
 
+            &::after {
+                content: "✓";
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background-color: #0084ff;
+                text-align: center;
+                font-size: 0.45em;
+                color: #ffffff;
+                border: 1px solid #dce0e6;
+                border-radius: 15px;
+                bottom: -8%;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+
             img {
+                width: 70px;
+                height: 70px;
                 border-radius: 15px;
             }
         }
+    }
+
+    .spotter-outfits-preview {
+        background-color: #000000;
+        padding: $gutter-y $gutter-x;
     }
 
     &-social-features {
         @include make-row();
 
         display: inline-flex;
+        column-gap: calc($gutter-x/2);
 
         .social-buttons {
-            
+        }
+    }
+
+    &-item-availabilities {
+        @include make-row();
+        flex-grow: 1;
+        width: inherit;
+        margin: $gutter-y 0 0;
+
+        &-wrapper {
+            @include make-col(12);
+
+            > caption {
+                @include make-row();
+            }
+        }
+
+        &-list,
+        > table {
+            @include make-row();
+
+            max-height: 150px;
+            row-gap: 0;
+            margin: $gutter-y 0;
+            text-align: left;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+
+            > tr > th {
+                width: 150px;
+                font-size: 0.95em;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            > tr > td {
+                width: 150px;
+                line-height: $gutter-y;
+            }
         }
     }
 }
