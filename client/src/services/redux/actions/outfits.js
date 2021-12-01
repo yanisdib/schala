@@ -1,4 +1,4 @@
-export const fetchOutfitsRequest = ({ id = undefined }) => ({ type: 'outfits/fetchOutfitsRequested', isLoading: true });
+export const fetchOutfitsRequest = () => ({ type: 'outfits/fetchOutfitsRequested', isLoading: true });
 
 export const fetchOutfitsSuccess = (outfits) => ({
     type: 'outfits/fetchOutfitsSucceeded',
@@ -6,9 +6,9 @@ export const fetchOutfitsSuccess = (outfits) => ({
     isLoading: false
 });
 
-export const addOutfitRequest = (outfits = [{}]) => ({
+export const addOutfitRequest = (outfit = [{}]) => ({
     type: 'outfits/addOutfitRequested',
-    outfits,
+    outfit,
     isLoading: true
 });
 
