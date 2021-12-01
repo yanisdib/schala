@@ -5,17 +5,16 @@ import { Tag, TagsSlider } from '../';
 
 
 function OutfitTags({ tags }) {
-    const tagsList = forwardRef((tagsProps, tagsRef) => {
+    const tagsList = tagsProps => {
         return tags.map((tag, i) => (
             <Tag
                 {...tagsProps}
-                ref={tagsRef}
                 key={`tag-${i}`}
             >
                 {tag}
             </Tag>
         ));
-    });
+    };
 
     return (
         <div className="tags">
