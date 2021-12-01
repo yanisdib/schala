@@ -1,6 +1,6 @@
 const initialState = [];
 
-export const outfitsReducer = (state = initialState, action) => {
+const outfitsReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'outfits/fetchOutfitsRequested':
             return [...state, action.isLoading];
@@ -17,3 +17,5 @@ export const outfitsReducer = (state = initialState, action) => {
         default: return state;
     }
 }
+
+export default outfitsReducer;
