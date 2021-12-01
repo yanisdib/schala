@@ -119,6 +119,45 @@
         }
     }
 
+    &-item-availabilities {
+        @include make-row();
+        flex-grow: 1;
+        width: inherit;
+        margin: $gutter-y 0 0;
+
+        &-wrapper {
+            @include make-col(12);
+
+            > caption {
+                @include make-row();
+            }
+        }
+
+        &-list,
+        > table {
+            @include make-row();
+
+            max-height: 150px;
+            row-gap: 0;
+            margin: $gutter-y 0;
+            text-align: left;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+
+            > tr > th {
+                width: 150px;
+                font-size: 0.95em;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            > tr > td {
+                width: 150px;
+                line-height: $gutter-y;
+            }
+        }
+    }
+
     &-spotter-banner {
         @include make-row();
 
@@ -167,6 +206,7 @@
     .spotter-outfits-preview {
         background-color: #000000;
         padding: $gutter-y $gutter-x;
+        border-radius: 15px;
     }
 
     &-social-features {
@@ -176,45 +216,6 @@
         column-gap: calc($gutter-x/2);
 
         .social-buttons {
-        }
-    }
-
-    &-item-availabilities {
-        @include make-row();
-        flex-grow: 1;
-        width: inherit;
-        margin: $gutter-y 0 0;
-
-        &-wrapper {
-            @include make-col(12);
-
-            > caption {
-                @include make-row();
-            }
-        }
-
-        &-list,
-        > table {
-            @include make-row();
-
-            max-height: 150px;
-            row-gap: 0;
-            margin: $gutter-y 0;
-            text-align: left;
-            overflow-y: auto;
-            scroll-behavior: smooth;
-
-            > tr > th {
-                width: 150px;
-                font-size: 0.95em;
-                font-weight: 600;
-                text-transform: uppercase;
-            }
-
-            > tr > td {
-                width: 150px;
-                line-height: $gutter-y;
-            }
         }
     }
 }
